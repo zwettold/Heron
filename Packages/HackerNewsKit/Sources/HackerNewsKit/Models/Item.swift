@@ -22,6 +22,13 @@ public protocol Item: Identifiable, Hashable, Codable {
     /// When this item was created/posted.
     var createdAt: Date? { get }
 
+    /// The content of the item.
+    ///
+    /// Depending on the type of the item, this may be a comment, a story, or a poll text.
+    ///
+    /// > Note: The `text` property is in the HTML format.
+    var text: String? { get }
+
     /// Whether this item is `dead`.
     ///
     /// Indicates that this post was killed by software, user flags, or moderator action.
@@ -75,6 +82,13 @@ extension Item {
 
     /// When this item was created/posted.
     public var createdAt: Date? { nil }
+
+    /// The content of the item.
+    ///
+    /// Depending on the type of the item, this may be a comment, a story, or a poll text.
+    ///
+    /// > Note: The `text` property is in the HTML format.
+    public var text: String? { nil }
 
     /// Whether this item is `dead`.
     ///
