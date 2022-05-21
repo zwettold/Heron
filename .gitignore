@@ -20,3 +20,10 @@ playground.xcworkspace
 
 # Swift Package Manager
 .build/
+.swiftpm/
+.netrc
+
+# Packages
+
+/Packages/**/*.xcodeproj
+/Packages/**/DerivedData

@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F818C8A6283945D000F21D1B /* HackerNewsKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HackerNewsKit; sourceTree = "<group>"; };
 		F8D2D2722831587D00DD03F1 /* Heron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D2D2752831587D00DD03F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8D2D2772831587D00DD03F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,9 +73,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F818C8A52839458100F21D1B /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				F818C8A6283945D000F21D1B /* HackerNewsKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
 		F8D2D2692831587D00DD03F1 = {
 			isa = PBXGroup;
 			children = (
+				F818C8A52839458100F21D1B /* Packages */,
 				F8D2D2742831587D00DD03F1 /* Sources */,
 				F8D2D28B2831587E00DD03F1 /* Tests */,
 				F8D2D2732831587D00DD03F1 /* Products */,
