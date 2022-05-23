@@ -22,6 +22,29 @@ public actor HackerNewsAPI {
     }
 }
 
+// MARK: - Endpoints
+
+extension HackerNewsAPI {
+    /// Fetches an item identified by the given `id` from the Hacker News API.
+    ///
+    /// - Parameter id: The identifier of the item to fetch.
+    /// - Returns: The item identified by the given `id`.
+    /// - Throws: An error if the item could not be fetched, or if the received data is invalid.
+    public func item<T: Item>(id: Int) async throws -> T {
+        let request = URLRequest(url: configuration.host.appendingPathComponent("item/\(id).json"))
+
+        let (data, response) = try await session.data(for: request)
+
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw URLError(.badServerResponse)
+        }
+
+        let item = try JSONDecoder().decode(T.self, from: data)
+
+        return item
+    }
+}
+
 // MARK: - Configuration
 
 extension HackerNewsAPI {
